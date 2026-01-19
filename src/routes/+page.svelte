@@ -25,7 +25,7 @@
   <div id="top"></div>
 
   <!-- Top Nav -->
-  <header class="sticky top-0 z-50" style="background-color: {NAVY}; color: {CREAM};">
+  <header style="background-color: {NAVY}; color: {CREAM};">
     <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-5">
       <a href="#top" class="flex items-center gap-3" aria-label="Staple home">
         <img src="/logo/staple-logo.svg" alt="Staple Bakery" class="h-12 w-auto" />
@@ -99,7 +99,7 @@
     </section>
 
     <!-- About -->
-    <section id="about" class="scroll-mt-24">
+    <section id="about">
       <div class="mx-auto max-w-6xl px-5 py-14 md:py-20">
         <div class="grid gap-10 md:grid-cols-12">
           <div class="md:col-span-4">
@@ -128,7 +128,7 @@
     </section>
 
     <!-- Ingredients -->
-    <section id="ingredients" class="scroll-mt-24">
+    <section id="ingredients">
       <div class="mx-auto max-w-6xl px-5 py-14 md:py-20">
         <div class="grid gap-10 md:grid-cols-12">
           <div class="md:col-span-5">
@@ -164,7 +164,7 @@
     </section>
 
     <!-- Location -->
-    <section id="location" class="scroll-mt-24">
+    <section id="location">
       <div class="mx-auto max-w-6xl px-5 py-14 md:py-20">
         <div class="grid gap-10 md:grid-cols-12">
           <div class="md:col-span-5">
@@ -242,7 +242,7 @@
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="scroll-mt-24">
+    <section id="contact">
       <div class="mx-auto max-w-6xl px-5 py-14 md:py-20">
         <div class="grid items-start gap-10 md:grid-cols-12">
           <div class="md:col-span-6">
