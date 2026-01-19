@@ -15,7 +15,7 @@
 </svelte:head>
 
 <div
-  class="min-h-screen"
+  class="min-h-screen overflow-x-hidden"
   style="
     background-color: {CREAM};
     color: {NAVY};
@@ -88,7 +88,7 @@
         <img
             src={mascot}
             alt="Mascot"
-            class="h-auto max-w-none w-[450px] sm:w-[500px] md:w-[640px] lg:w-[720px] xl:w-[820px]"
+            class="block h-auto w-[min(88vw,420px)] sm:w-[520px] md:w-[640px] lg:w-[720px] xl:w-[820px]"
         />
         </div>
     </div>
