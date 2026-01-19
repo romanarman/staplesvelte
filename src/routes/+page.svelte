@@ -1,5 +1,7 @@
 <script lang="ts">
   import FeatureRow from "$lib/FeatureRow.svelte"
+  import mascot from "$lib/assets/mascot/mascot.svg";
+
 
   const NAVY = "#252640";
   const CREAM = "#FFF9E5";
@@ -65,35 +67,35 @@
   <main>
     <!-- Hero -->
     <section class="relative">
-      <div class="mx-auto grid min-h-[calc(100vh-72px)] max-w-6xl items-stretch gap-8 px-5 py-10 md:grid-cols-12 md:py-16">
+    <div class="mx-auto grid min-h-[calc(100svh-72px)] items-center gap-10 px-5 py-10 md:grid-cols-12 md:py-16">
         <!-- Left -->
-        <div class="md:col-span-7 flex items-center">
-          <div class="w-full">
-            <p class="text-xs font-medium tracking-[0.22em] opacity-80">NEIGHBOURHOOD BAKERY • FOUNDED 2026</p>
-            <h1 class="mt-6 text-[clamp(3.5rem,8vw,10rem)] font-bold leading-[0.9] tracking-tight">
+        <div class="md:col-span-6 flex flex-col items-center">
+        <div class="flex flex-col items-center md:items-start">
+          <p class="text-xs font-medium tracking-[0.22em] opacity-80">
+              NEIGHBOURHOOD BAKERY • FOUNDED 2026
+          </p>
+
+          <h1 class="mt-6 text-[clamp(4.5rem,8vw,10rem)] font-bold leading-[0.9] tracking-tight text-center md:text-left">
               <span class="block">BREAD</span>
               <span class="block">PASTRY</span>
               <span class="block">COFFEE</span>
-            </h1>
-          </div>
+          </h1>
+        </div>
         </div>
 
         <!-- Right -->
-        <div class="md:col-span-5">
-          <div class="h-full rounded-[2rem] border p-6" style="border-color: rgba(37,38,64,0.14);">
-            <div
-              class="flex h-full min-h-[340px] flex-col items-center justify-center gap-4 rounded-[1.6rem] border border-dashed px-6 text-center"
-              style="border-color: rgba(37,38,64,0.22);"
-            >
-              <div class="text-sm font-medium">Illustration placeholder</div>
-            </div>
-          </div>
+    <div class="md:col-span-6 flex items-center justify-center md:justify-center overflow-visible">
+        <img
+            src={mascot}
+            alt="Mascot"
+            class="h-auto max-w-none w-[450px] sm:w-[500px] md:w-[640px] lg:w-[720px] xl:w-[820px]"
+        />
         </div>
-      </div>
+    </div>
 
-      <div class="mx-auto max-w-6xl px-5">
+    <div class="mx-auto max-w-6xl px-5">
         <div class="h-px w-full" style="background-color: rgba(37,38,64,0.14);"></div>
-      </div>
+    </div>
     </section>
 
     <!-- About -->
