@@ -252,11 +252,18 @@
               For enquiries or questions, email us and we’ll get back to you as soon as we can.
             </p>
 
-            <div class="mt-6 flex flex-wrap items-center gap-3">
+            <div class="mt-6 flex w-full flex-col items-center gap-3 md:items-start">
               <a
-                class="rounded-2xl px-5 py-3 text-sm font-medium shadow-sm transition hover:shadow"
-                style="background-color: {NAVY}; color: {CREAM};"
                 href="mailto:hello@staplebakery.co.uk"
+                class="
+                  w-full md:w-auto
+                  rounded-2xl
+                  px-6 py-4
+                  text-sm font-medium
+                  text-center
+                  shadow-sm transition hover:shadow
+                "
+                style="background-color: {NAVY}; color: {CREAM};"
               >
                 hello@staplebakery.co.uk
               </a>
