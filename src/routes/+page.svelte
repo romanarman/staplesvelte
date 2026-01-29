@@ -1,6 +1,6 @@
 <script lang="ts">
   import FeatureRow from "$lib/FeatureRow.svelte"
-  import mascot from "$lib/assets/mascot/mascot.svg";
+  import mascot from "$lib/assets/mascot/mascot-2.svg";
 
 
   const NAVY = "#252640";
