@@ -1,7 +1,7 @@
 <script lang="ts">
   import FeatureRow from "$lib/FeatureRow.svelte"
   import mascot from "$lib/assets/mascot/mascot-2.svg";
-
+  import logo from "$lib/assets/logo/staple-logo-2.svg"
 
   const NAVY = "#252640";
   const CREAM = "#FFF9E5";
@@ -26,11 +26,9 @@
 
   <!-- Top Nav -->
   <header style="background-color: {NAVY}; color: {CREAM};">
-    <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-5">
-      <a href="#top" class="flex items-center gap-3" aria-label="Staple home">
-        <img src="/logo/staple-logo.svg" alt="Staple Bakery" class="h-12 w-auto" />
-      </a>
+    <div class="relative mx-auto flex max-w-6xl items-center px-5 py-5">
 
+      <!-- Left Nav -->
       <nav class="hidden items-center gap-6 text-sm md:flex">
         <a class="opacity-80 hover:opacity-100" href="#about">About</a>
         <a class="opacity-80 hover:opacity-100" href="#ingredients">Ingredients</a>
@@ -38,14 +36,25 @@
         <a class="opacity-80 hover:opacity-100" href="#contact">Contact</a>
       </nav>
 
+      <!-- Center Logo -->
       <a
-        href="https://instagram.com/staplebakery"
-        target="_blank"
-        rel="noreferrer"
-        class="inline-flex h-9 w-9 items-center justify-center rounded-full border transition hover:opacity-80"
-        style="border-color: rgba(255,249,229,0.35);"
-        aria-label="Instagram"
+        href="#top"
+        class="absolute left-1/2 -translate-x-1/2 flex items-center"
+        aria-label="Staple home"
       >
+        <img src={logo} alt="Staple Bakery" class="h-12 w-auto scale-140" />
+      </a>
+
+      <!-- Right Instagram -->
+      <div class="ml-auto">
+        <a
+          href="https://instagram.com/staplebakery"
+          target="_blank"
+          rel="noreferrer"
+          class="inline-flex h-9 w-9 items-center justify-center rounded-full border transition hover:opacity-80"
+          style="border-color: rgba(255,249,229,0.35);"
+          aria-label="Instagram"
+        >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -60,7 +69,9 @@
           <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
           <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
         </svg>
-      </a>
+        </a>
+      </div>
+
     </div>
   </header>
 
