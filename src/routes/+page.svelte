@@ -3,7 +3,7 @@
   import mascot from "$lib/assets/mascot/mascot-2.svg";
   import logo from "$lib/assets/logo/staple-logo-2.svg"
 
-  const NAVY = "#252640";
+  const NAVY = "#293456";
   const CREAM = "#FFF9E5";
   const year = new Date().getFullYear();
 </script>
