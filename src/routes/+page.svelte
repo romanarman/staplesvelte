@@ -1,7 +1,7 @@
 <script lang="ts">
   import FeatureRow from "$lib/FeatureRow.svelte"
   import mascot from "$lib/assets/mascot/mascot-2.svg";
-  import logo from "$lib/assets/logo/staple-logo-2.svg"
+  import logo from "$lib/assets/logo/staple-logo-3.svg"
 
   const NAVY = "#293456";
   const CREAM = "#FFF9E5";
@@ -26,7 +26,7 @@
 
   <!-- Top Nav -->
   <header style="background-color: {NAVY}; color: {CREAM};">
-    <div class="relative mx-auto flex max-w-6xl items-center px-5 py-5">
+    <div class="relative mx-auto flex max-w-6xl items-center px-5 py-6">
 
       <!-- Left Nav -->
       <nav class="hidden items-center gap-6 text-sm md:flex">
@@ -42,7 +42,7 @@
         class="absolute left-1/2 -translate-x-1/2 flex items-center"
         aria-label="Staple home"
       >
-        <img src={logo} alt="Staple Bakery" class="h-12 w-auto scale-140" />
+        <img src={logo} alt="Staple Bakery" class="h-12 w-auto scale-85" />
       </a>
 
       <!-- Right Instagram -->
