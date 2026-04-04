@@ -34,7 +34,7 @@
       style="background-color: {NAVY_DARK}; color: {CREAM} border-bottom: 1px solid rgba(255,249,229,0.18);"
       
     >
-      OPENING 4 APRIL • 10AM
+      OPENING 18 APRIL • 10AM
     </div>
         
     <div class="relative mx-auto flex max-w-6xl items-center px-5 py-6">
