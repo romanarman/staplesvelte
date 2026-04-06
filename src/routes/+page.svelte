@@ -1,7 +1,7 @@
 <script lang="ts">
   import FeatureRow from "$lib/FeatureRow.svelte"
   import mascot from "$lib/assets/mascot/mascot-2.svg";
-  import logo from "$lib/assets/logo/staple-logo-3.svg"
+  import logo from "$lib/assets/logo/staple-logo-2.svg"
 
   const NAVY = "#293456";
   const CREAM = "#FFF9E5";
@@ -53,7 +53,7 @@
         class="absolute left-1/2 -translate-x-1/2 flex items-center"
         aria-label="Staple home"
       >
-        <img src={logo} alt="Staple Bakery" class="h-12 w-auto scale-85" />
+        <img src={logo} alt="Staple Bakery" class="h-12 w-auto scale-160" />
       </a>
 
       <!-- Right Instagram -->
