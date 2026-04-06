@@ -53,7 +53,7 @@
         class="absolute left-1/2 -translate-x-1/2 flex items-center"
         aria-label="Staple home"
       >
-        <img src={logo} alt="Staple Bakery" class="h-12 w-auto scale-160" />
+        <img src={logo} alt="Staple Bakery" class="h-12 w-auto scale-135" />
       </a>
 
       <!-- Right Instagram -->
