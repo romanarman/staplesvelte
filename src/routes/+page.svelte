@@ -28,14 +28,14 @@
   <!-- Top Nav -->
   <header style="background-color: {NAVY}; color: {CREAM};">
 
-    <!-- Opening banner -->
-    <div
+    <!-- Announcement banner -->
+    <!-- <div
       class="px-5 py-3 text-center text-sm font-semibold tracking-[0.22em]"
       style="background-color: {NAVY_DARK}; color: {CREAM} border-bottom: 1px solid rgba(255,249,229,0.18);"
       
     >
       OPENING 18 APRIL • 10AM
-    </div>
+    </div> -->
         
     <div class="relative mx-auto flex max-w-6xl items-center px-5 py-6">
 
