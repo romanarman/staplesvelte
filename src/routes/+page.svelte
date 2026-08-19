@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { slide } from "svelte/transition";
   import FeatureRow from "$lib/FeatureRow.svelte"
   import mascot from "$lib/assets/mascot/mascot-2.svg";
   import logo from "$lib/assets/logo/staple-logo.svg"
@@ -7,6 +8,8 @@
   const CREAM = "#FFF9E5";
   const NAVY_DARK = "#1F2845";
   const year = new Date().getFullYear();
+
+  let mobileMenuOpen = $state(false);
 </script>
 
 <svelte:head>
@@ -39,10 +42,54 @@
         
     <div class="relative mx-auto flex max-w-6xl items-center px-5 py-6">
 
+      <!-- Mobile menu toggle -->
+      <button
+        type="button"
+        class="inline-flex h-9 w-9 items-center justify-center rounded-full border transition hover:opacity-80 md:hidden"
+        style="border-color: rgba(255,249,229,0.35);"
+        aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+        aria-expanded={mobileMenuOpen}
+        onclick={() => (mobileMenuOpen = !mobileMenuOpen)}
+      >
+        {#if mobileMenuOpen}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="h-5 w-5"
+            aria-hidden="true"
+          >
+            <line x1="6" y1="6" x2="18" y2="18" />
+            <line x1="18" y1="6" x2="6" y2="18" />
+          </svg>
+        {:else}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="h-5 w-5"
+            aria-hidden="true"
+          >
+            <line x1="4" y1="7" x2="20" y2="7" />
+            <line x1="4" y1="12" x2="20" y2="12" />
+            <line x1="4" y1="17" x2="20" y2="17" />
+          </svg>
+        {/if}
+      </button>
+
       <!-- Left Nav -->
       <nav class="hidden items-center gap-6 text-sm md:flex">
         <a class="opacity-80 hover:opacity-100" href="#about">About</a>
         <a class="opacity-80 hover:opacity-100" href="#ingredients">Ingredients</a>
+        <a class="opacity-80 hover:opacity-100" href="#gift-cards">Gift Cards</a>
         <a class="opacity-80 hover:opacity-100" href="#location">Location</a>
         <a class="opacity-80 hover:opacity-100" href="#contact">Contact</a>
       </nav>
@@ -84,6 +131,53 @@
       </div>
 
     </div>
+
+    <!-- Mobile menu -->
+    {#if mobileMenuOpen}
+      <div class="md:hidden" transition:slide={{ duration: 200 }}>
+        <nav
+          class="flex flex-col gap-1 border-t px-5 py-4 text-sm"
+          style="border-color: rgba(255,249,229,0.18);"
+        >
+          <a
+            class="rounded-xl px-3 py-3 opacity-90 hover:opacity-100"
+            href="#about"
+            onclick={() => (mobileMenuOpen = false)}>About</a
+          >
+          <a
+            class="rounded-xl px-3 py-3 opacity-90 hover:opacity-100"
+            href="#ingredients"
+            onclick={() => (mobileMenuOpen = false)}>Ingredients</a
+          >
+          <a
+            class="rounded-xl px-3 py-3 opacity-90 hover:opacity-100"
+            href="#gift-cards"
+            onclick={() => (mobileMenuOpen = false)}>Gift Cards</a
+          >
+          <a
+            class="rounded-xl px-3 py-3 opacity-90 hover:opacity-100"
+            href="#location"
+            onclick={() => (mobileMenuOpen = false)}>Location</a
+          >
+          <a
+            class="rounded-xl px-3 py-3 opacity-90 hover:opacity-100"
+            href="#contact"
+            onclick={() => (mobileMenuOpen = false)}>Contact</a
+          >
+
+          <a
+            class="mt-2 inline-flex items-center justify-center rounded-2xl px-6 py-3 text-sm font-medium shadow-sm transition hover:shadow"
+            style="background-color: {CREAM}; color: {NAVY};"
+            href="https://app.squareup.com/gift/MLHKRTKVRRQCG/order"
+            target="_blank"
+            rel="noreferrer"
+            onclick={() => (mobileMenuOpen = false)}
+          >
+            Buy a Gift Card
+          </a>
+        </nav>
+      </div>
+    {/if}
   </header>
 
   <main>
@@ -176,6 +270,38 @@
                 body="Drinks made with beans from a local roaster - dialled in for maximum flavour."
               />
             </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mx-auto max-w-6xl px-5">
+        <div class="h-px w-full" style="background-color: rgba(37,38,64,0.14);"></div>
+      </div>
+    </section>
+
+    <!-- Gift Cards -->
+    <section id="gift-cards">
+      <div class="mx-auto max-w-6xl px-5 py-14 md:py-20">
+        <div class="grid items-center gap-10 md:grid-cols-12">
+          <div class="md:col-span-7">
+            <p class="text-xs font-medium tracking-[0.22em] opacity-80">GIFT CARDS</p>
+            <h2 class="mt-4 text-3xl font-medium tracking-tight">Give Staple.</h2>
+            <p class="mt-4 max-w-xl text-sm leading-relaxed opacity-85">
+              Pick an amount and we'll email a gift card straight over - spend it in the bakery or
+              send it to a friend. £10, £20, £25 or £50, or set your own amount.
+            </p>
+          </div>
+
+          <div class="md:col-span-5 flex justify-center md:justify-end">
+            <a
+              class="inline-flex w-full items-center justify-center gap-2 rounded-2xl px-6 py-4 text-sm font-medium shadow-sm transition hover:shadow md:w-auto"
+              style="background-color: {NAVY}; color: {CREAM};"
+              href="https://app.squareup.com/gift/MLHKRTKVRRQCG/order"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Buy a Gift Card
+            </a>
           </div>
         </div>
       </div>
@@ -303,6 +429,7 @@
         <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm">
           <a class="opacity-80 hover:opacity-100" href="#about">About</a>
           <a class="opacity-80 hover:opacity-100" href="#ingredients">Ingredients</a>
+          <a class="opacity-80 hover:opacity-100" href="#gift-cards">Gift Cards</a>
           <a class="opacity-80 hover:opacity-100" href="#location">Location</a>
           <a class="opacity-80 hover:opacity-100" href="mailto:hello@staplebakery.co.uk">Email</a>
         </div>
